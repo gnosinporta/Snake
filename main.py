@@ -1,4 +1,5 @@
-from turtle import Screen, Turtle
+from turtle import Screen
+from food import Food
 from snake import Snake
 import time
 
@@ -8,11 +9,13 @@ screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
 screen.title("my snake game")
-#turns the animation on/and off and sets delays for update drawings.
+# the next instruction turns the animation on/and off 
+# and sets delays for update drawings.
 # screen.update() must be called to see the effect
 screen.tracer(0)    
 
 snake = Snake()
+food = Food()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -27,7 +30,11 @@ game_is_on = True
 
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.15)
     snake.move()
+
+    # detecting collision with food
+    if snake.head.distance(food) < 10:
+        print("nom nom nom")
 
 screen.exitonclick()
