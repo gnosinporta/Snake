@@ -1,12 +1,12 @@
 from turtle import Turtle
 
-#this list of tuples stores the starting position of the snake in the beginning of the game
+# this list of tuples stores the starting position of the snake in the beginning of the game
 STARTING_POSITIONS = [(0,0), (-20,0), (-40,0)]
 
-#this constant stores the moving distance of each step of the snake
+# this constant stores the moving distance of each step of the snake
 MOVE_DISTANCE = 20
 
-#constants of direction
+# constants of direction
 UP = 90
 DOWN = 270
 LEFT = 180
@@ -55,3 +55,4 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+            

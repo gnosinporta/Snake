@@ -1,6 +1,7 @@
 from turtle import Screen
 from food import Food
 from snake import Snake
+from scoreboard import Scoreboard
 import time
 
 
@@ -16,6 +17,10 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
+Scoreboard = Scoreboard()
+
+# TODO: the food must be created in a place where the snake is not there
+# it has to be another better way to say "a place where the snake is not there"
 
 screen.listen()
 screen.onkey(snake.up, "Up")
