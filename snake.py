@@ -15,6 +15,8 @@ RIGHT = 0
 
 class Snake:
 
+    # TODO: of course the snake must grow everytime it eats food
+
     def __init__(self):
         # This first list contains Turtles that form the body
         self.segments = []  
@@ -39,7 +41,7 @@ class Snake:
 
         self.segments[0].forward(MOVE_DISTANCE)
 
-    #all these methods define how the snake turns
+    # all these methods define how the snake turns
     def up(self):
         if self.head.heading() != DOWN:
             self.head.setheading(UP)

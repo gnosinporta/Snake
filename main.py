@@ -5,7 +5,7 @@ from scoreboard import Scoreboard
 import time
 
 
-#screen creation
+# screen creation
 screen = Screen()
 screen.setup(width=600, height=600)
 screen.bgcolor("black")
@@ -17,10 +17,7 @@ screen.tracer(0)
 
 snake = Snake()
 food = Food()
-Scoreboard = Scoreboard()
-
-# TODO: the food must be created in a place where the snake is not there
-# it has to be another better way to say "a place where the snake is not there"
+scoreboard = Scoreboard()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -29,7 +26,7 @@ screen.onkey(snake.left, "Left")
 screen.onkey(snake.right, "Right")
 
 
-#game loop
+# game loop
 
 game_is_on = True
 
@@ -40,6 +37,14 @@ while game_is_on:
 
     # detecting collision with food
     if snake.head.distance(food) < 10:
-        print("nom nom nom")
+        print("om nom nom")
+        scoreboard.increase_score()
+        food.refresh()
+
+    # TODO: detect collision with edges of the screen
+    # TODO: of course the snake must grow everytime it eats food
+    # TODO: detect collision with itself
+    # TODO: show game over in screen
+
 
 screen.exitonclick()
