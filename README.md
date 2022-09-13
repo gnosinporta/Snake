@@ -6,4 +6,4 @@ https://docs.python.org/3/library/turtle.html
 
 🦾 V 1.0 - september 7, 2022
 
-🔧 L A S T - U P D A T E : september 7, 2022
+🔧 L A S T - U P D A T E : september 13, 2022
