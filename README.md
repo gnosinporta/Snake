@@ -8,4 +8,4 @@ Control the snake with the arrow keys.
 
 🦾 V 1.0 - september 7, 2022
 
-🔧 L A S T - U P D A T E : september 13, 2022
+🔧 L A S T - U P D A T E : october 6, 2022
